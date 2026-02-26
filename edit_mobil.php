@@ -31,43 +31,58 @@ if (isset($_POST['update'])) {
 <?php include "include/header.php"; ?>
 <?php include "include/sidebar.php"; ?>
 
-<div class="col-md-10 p-4">
+<div class="container col-md-10 p-4">
     <h2>Edit Mobil</h2>
     <hr>
 
-    <form method="POST">
-        <div class="mb-3">
-            <label>Nama Mobil</label>
-            <input type="text" name="nama_mobil" 
-                   value="<?= $data['nama_mobil']; ?>" 
-                   class="form-control" required>
-        </div>
+    <div class="row align-items-start">
+        <div class="col">
 
-        <div class="mb-3">
-            <label>Brand</label>
-            <input type="text" name="brand" 
-                   value="<?= $data['brand']; ?>" 
-                   class="form-control" required>
-        </div>
+        <form method="POST">
+            <div class="mb-3">
+                <label>Nama Mobil</label>
+                <input type="text" name="nama_mobil" 
+                    value="<?= $data['nama_mobil']; ?>" 
+                    class="form-control" required>
+            </div>
 
-        <div class="mb-3">
-            <label>Harga per Hari</label>
-            <input type="number" name="harga" 
-                   value="<?= $data['harga_per_hari']; ?>" 
-                   class="form-control" required>
-        </div>
+            <div class="mb-3">
+                <label>Brand</label>
+                <input type="text" name="brand" 
+                    value="<?= $data['brand']; ?>" 
+                    class="form-control" required>
+            </div>
 
-        <div class="mb-3">
-            <label>Status</label>
-            <select name="status" class="form-control">
-                <option value="tersedia" <?= $data['status']=="tersedia"?"selected":""; ?>>Tersedia</option>
-                <option value="disewa" <?= $data['status']=="disewa"?"selected":""; ?>>Disewa</option>
-            </select>
-        </div>
+            <div class="mb-3">
+                <label>Harga per Hari</label>
+                <input type="number" name="harga" 
+                    value="<?= $data['harga_per_hari']; ?>" 
+                    class="form-control" required>
+            </div>
 
-        <button type="submit" name="update" class="btn btn-success">Update</button>
-        <a href="mobil.php" class="btn btn-secondary">Kembali</a>
-    </form>
+            <div class="mb-3">
+                <label>Status</label>
+                <select name="status" class="form-control">
+                    <option value="tersedia" <?= $data['status']=="tersedia"?"selected":""; ?>>Tersedia</option>
+                    <option value="disewa" <?= $data['status']=="disewa"?"selected":""; ?>>Disewa</option>
+                </select>
+            </div>
+
+            <button type="submit" name="update" class="btn btn-success">Update</button>
+            <a href="mobil.php" class="btn btn-secondary">Kembali</a>
+        </form>
+
+
+        </div>
+        <div class="col">
+
+            <div class="card text-center">
+                <img src="<?= "assets/upload/".$data['foto'];?>" class="card-img-top" alt="...">
+            </div>
+
+        </div>
+    </div>
 </div>
+
 
 <?php include "include/footer.php"; ?>
