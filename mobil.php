@@ -20,7 +20,6 @@ if (!isset($_SESSION['login'])) {
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Foto</th>
             <th>Nama Mobil</th>
             <th>Brand</th>
             <th>Harga / Hari</th>
@@ -37,9 +36,6 @@ if (!isset($_SESSION['login'])) {
 
         <tr>
             <td><?= $no++; ?></td>
-            <td>
-                <img src="assets/upload/<?= $data['foto']; ?>" width="100">
-            </td>
             <td><?= $data['nama_mobil']; ?></td>
             <td><?= $data['brand']; ?></td>
             <td>Rp <?= number_format($data['harga_per_hari']); ?></td>

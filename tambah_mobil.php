@@ -47,7 +47,7 @@ if (isset($_POST['simpan'])) {
 
         <div class="mb-3">
             <label>Harga per Hari</label>
-            <input type="number" name="harga" class="form-control" required>
+            <input type="number" min="0" name="harga" class="form-control" required>
         </div>
 
         <div class="mb-3">

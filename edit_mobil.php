@@ -55,7 +55,7 @@ if (isset($_POST['update'])) {
 
             <div class="mb-3">
                 <label>Harga per Hari</label>
-                <input type="number" name="harga" 
+                <input type="number" name="harga" min="0"
                     value="<?= $data['harga_per_hari']; ?>" 
                     class="form-control" required>
             </div>
