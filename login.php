@@ -10,7 +10,6 @@ if (isset($_POST['login'])) {
     $query = mysqli_query($conn, "SELECT * FROM admin 
                                   WHERE username='$username' 
                                   AND password='$password'");
-
     $cek = mysqli_num_rows($query);
 
     if ($cek > 0) {

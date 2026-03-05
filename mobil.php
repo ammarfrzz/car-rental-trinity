@@ -20,7 +20,7 @@ if (!isset($_SESSION['login'])) {
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Nama Mobil</th>
+            <th>Nama Mobil</th> 
             <th>Brand</th>
             <th>Harga / Hari</th>
             <th>Status</th>

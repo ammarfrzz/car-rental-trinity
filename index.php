@@ -34,7 +34,7 @@ if (isset($_GET['brand'])) {
         <div class="row">
             <div class="col-md-4">
                 <select name="brand" class="form-control">
-                    <option value="">-- Filter Brand --</option>
+                    <option value="">Semua Brand</option>
 
                     <?php
                     $brand_query = mysqli_query($conn, "SELECT DISTINCT brand FROM mobil");

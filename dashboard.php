@@ -30,14 +30,14 @@ if (!isset($_SESSION['login'])) {
         </div>
 
         <div class="col-md-4">
-            <div class="card bg-warning text-white p-3">
+            <div class="card bg-dark text-white p-3">
                 <h5>Booking Pending</h5>
                 <h3><?= $booking_pending; ?></h3>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card bg-success text-white p-3">
+            <div class="card bg-dark text-white p-3">
                 <h5>Mobil Tersedia</h5>
                 <h3><?= $mobil_tersedia; ?></h3>
             </div>
