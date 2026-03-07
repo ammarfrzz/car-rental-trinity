@@ -1,6 +1,18 @@
-/* .bg-primary {
-    background-color: aquamarine;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+   background: linear-gradient(180deg, #f0f7ff, #f8fafc) !important;
+   font-family: 'Inter', sans-serif;
 }
-.bg-dark {
-    background-color: white !important;
-} */
+
+.bg-primary {
+    background-color: rgb(255, 255, 255)!important;
+}
+
+li.active li:hover{
+    background-color: #eff6ff !important;
+}
+
+li a:hover {
+    color: #2563eb !important;
+}
