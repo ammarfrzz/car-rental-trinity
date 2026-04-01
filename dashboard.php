@@ -261,8 +261,10 @@ $status = mysqli_fetch_assoc($q_status);
   }
 
   .chart-title {
-    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
     font-weight: 700;
+    letter-spacing: -0.01em;
     color: var(--blue-deep);
     display: flex;
     align-items: center;
@@ -272,6 +274,15 @@ $status = mysqli_fetch_assoc($q_status);
   .chart-title i {
     color: var(--blue-accent);
     font-size: 14px;
+  }
+
+  .chart-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-top: 2px;
+    letter-spacing: 0.01em;
   }
 
   .chart-badge {
@@ -453,9 +464,12 @@ $status = mysqli_fetch_assoc($q_status);
 
     <div class="chart-card">
       <div class="chart-card-header">
-        <div class="chart-title">
-          <i class="fa-solid fa-chart-line"></i>
-          Pendapatan Harian
+        <div>
+          <div class="chart-title">
+            <i class="fa-solid fa-chart-line"></i>
+            Pendapatan Harian
+          </div>
+          <div class="chart-subtitle">Rekap pendapatan 30 hari terakhir</div>
         </div>
         <span class="chart-badge">30 Hari Terakhir</span>
       </div>
@@ -580,11 +594,13 @@ $status = mysqli_fetch_assoc($q_status);
         legend: { display: false },
         tooltip: {
           backgroundColor: '#1a3a6b',
-          titleFont: { family: "'Plus Jakarta Sans', sans-serif", size: 11 },
-          bodyFont:  { family: "'Plus Jakarta Sans', sans-serif", size: 12 },
-          padding: 10,
+          titleFont: { family: "'Plus Jakarta Sans', sans-serif", size: 12, weight: '600' },
+          bodyFont:  { family: "'Plus Jakarta Sans', sans-serif", size: 13, weight: '500' },
+          padding: 12,
+          cornerRadius: 10,
           displayColors: false,
           callbacks: {
+            title: ctx => ctx[0].label,
             label: ctx => ' Rp ' + Number(ctx.raw).toLocaleString('id-ID')
           }
         }
@@ -593,7 +609,7 @@ $status = mysqli_fetch_assoc($q_status);
         x: {
           grid: { display: false },
           ticks: {
-            font: { family: "'Plus Jakarta Sans', sans-serif", size: 10 },
+            font: { family: "'Plus Jakarta Sans', sans-serif", size: 11, weight: '500' },
             color: '#94a3b8',
             maxTicksLimit: 8,
           },
@@ -602,7 +618,7 @@ $status = mysqli_fetch_assoc($q_status);
         y: {
           grid: { color: '#e8edf8', lineWidth: 1 },
           ticks: {
-            font: { family: "'Plus Jakarta Sans', sans-serif", size: 10 },
+            font: { family: "'Plus Jakarta Sans', sans-serif", size: 11, weight: '500' },
             color: '#94a3b8',
             callback: val => 'Rp ' + Number(val).toLocaleString('id-ID')
           },
